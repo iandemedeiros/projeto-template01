@@ -1,69 +1,119 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Mobile First ainda nao fiz!*/
-
+:root{
+    --fontpoppins:"Poppins", sans-serif;
+}
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontpoppins);
 }
-.header-fundo{
-    background-color: #EAEAEA;
-    border-bottom: 5px solid black;
+body{
+    background: black url(../imagens/images.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
-#burguer{
-    display:none;
-}
-.nav-link{
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.2em;
-}
-.nav-item{
-    margin-top: 95px;
-    margin-right: 20px;
-}
-.intro{
-    background-color: #D9D9D9;
-}
-.card-title{
-    opacity: 0.7;
-    text-transform: uppercase;
-}
-.conteudo{
-    background-color: rgba(0, 0, 0, 0.863);
-}
-.cartao{
-    justify-items: center;
-    padding: 20px;
-}
-.card{
+a{
+    text-decoration: none;
     color: white;
-    background-color: transparent;
-    border: none;
+    font-size: 1em;
 }
-.btn {
+a:hover{
+    text-decoration: underline;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0,0.2);
+}
+.login{
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 0 20px 20px 20px;
+}
+.login-header{
+    display: inline-block;
     background-color: white;
-    color: black;
+    padding: 0 10px;
+    font-size: 1.6em;
+    font-family: var(--fontpoppins);
+    border-radius: 0 0px 12px 12px;
+    margin-left: 90px;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.534);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.575);
+}
+.box-input{
+    position: relative;
+}
+.box-input input{
+    width: 100%;
+    padding: 6px;
+    margin-top: 25px;
+    border-radius: 8px;
     border: none;
+    position: relative;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: .9em;
 }
-.conteudo-final{
-    background-color: lightgray;
+.labell{
+    font-size: 1em;
+    position: absolute;
+    left: 7px;
+    top: 30px;
+    color: white;
+    transition: 0.5s;
+    cursor: text;
 }
-.img-form{
-    height: 400px;
+.box-input i{
+    position: absolute;
+    left: 264px;
+    top: 30px;
 }
-.img-lustre{
-    margin-top: 26px;
-    margin-left: 75px;
+.login .box-input input:focus~.labell{
+    top: 5px;
+    left: 5px;
+    font-size: 0.8em;
 }
-.footer-h4{
-    text-align: center;
-    padding: 7px;
+.remember-forgot{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 0.9em;
+    color: #03e9f4;
 }
-.text-bg-dark{
-    border: 20px solid lightgray;
+.remember{
+    margin-right: 45px;
+    font-weight: 600;
+}
+.remember label{
+    cursor: pointer;
+}
+.enter input{
+    width: 100%;
+    padding: 6px;
+    margin:10px 0;
+    border-radius: 8px;
+    border: none;
+    position: relative;
+    background-color: #03e9f4;
+    font-size: .9em;
+    cursor: pointer;
+}
+.enter input:hover{
+    background-color: #03a3ac;
+}
+.register{
+    color: white;
+}
+.register span{
+    font-size: 0.9em;
 }
